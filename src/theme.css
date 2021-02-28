@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: url(images/bg.jpg) no-repeat fixed center / cover;
+}
+.container {
+    padding-top: 10rem;
+    max-width: 970px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background: inherit;
+}
+.card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 1px 1px 4px rgba(14,14,14,.3);
+    background: inherit;
+    position: relative;
+}
+.card:before {
+    background: inherit;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: url(#blur);
+    filter: blur(5px);
+}
+.btn {
+    color: #42b983;
+    position: relative;
+    border-radius: 99px;
+    border: 1px solid #42b983;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    outline: none;
+    background-color: #fff;
+    transition: all 0.22s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.btn.btn-primary {
+    background-color: #42b983;
+    color: #fff;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.btn:active {
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.3);
+}
+input[type=file] {
+    display: none;
+}
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+.preview-image {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+}
+.preview-image.removing {
+    transform: scale(0);
+    transition: transform .3s;
+}
+.preview-image img {
+    width: 180px;
+    height: auto;
+}
+.preview-remove {
+    transition: top .22s;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: -30px;
+    font-weight: bold;
+    background-color: rgba(255,255,255,.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.preview-image:hover .preview-remove {
+    top:0;
+}
+.preview-image:hover .preview-info {
+    bottom: 4px;
+} 
+
+.preview-info {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    bottom: -40px;
+    min-height: 24px;
+    font-size: .8rem;
+    line-height: 1.2;
+    background-color: rgba(255,255,255,.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: bottom .22s;
+    padding: 5px;
+}
+.preview-info-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #42b983;
+  transition: width .22s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+    
+   
